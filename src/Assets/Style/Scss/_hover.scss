@@ -1,0 +1,11 @@
+.extension__left:hover,
+.extension__right--fb:hover,
+.extension__right--ap:hover {
+    background: #E9F1FF;
+    color: $color-border-click;
+    transition: all 0.3s;
+}
+
+.section__btnlog:hover {
+    opacity: 0.8
+}

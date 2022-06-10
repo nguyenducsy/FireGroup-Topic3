@@ -1,0 +1,196 @@
+@import '../Scss/_variable';
+@import '../Scss/form';
+@import '../Scss/hover';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 44px
+}
+
+.section {
+    width: 100%;
+    background-size: cover;
+    background-position: bottom center;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-image: url(../../Images/bg.png);
+    &__logo {
+        float: left;
+        width: 139px;
+        margin: $margin-section;
+        &--img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__form {
+        position: absolute;
+        width: 539px;
+        height: 741px;
+        top: 79px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        right: 160px;
+        color: $color-texts;
+        background: rgba(255, 255, 255, 0.75);
+        border-radius: 40px;
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 21px;
+        list-style: none;
+        transition: all 0.3s;
+        &--wel {
+            width: 235px;
+            //   line-height: 32px;
+            margin-bottom: 14px;
+            strong {
+                color: $color-mark
+            }
+        }
+        &--noacc {
+            width: 86px;
+            margin-top: 6px;
+            font-size: 13px;
+            line-height: 20px;
+            color: #8D8D8D;
+            span {
+                cursor: pointer;
+                color: $color-mark;
+            }
+        }
+    }
+    &__sigin {
+        display: flex;
+        font-weight: 500;
+        font-style: normal;
+        transition: all 0.3s;
+        font-size: 55px;
+        line-height: 82px;
+    }
+    &__forgot {
+        display: flex;
+        margin-top: 12px;
+        justify-content: flex-end;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: $color-border-click;
+    }
+    &__log {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__btnlog {
+        background: #779341;
+        box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+        border-radius: 10px;
+        font-weight: 500;
+        width: 54px;
+        transition: all 0.3s;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 15px 91px;
+        margin-top: 44px;
+        line-height: 24px;
+        color: $bg-white;
+    }
+}
+
+//responsive
+@media screen and (max-width: 376px) {
+    .section {
+        transition: all 0.3s;
+        max-width: 375px;
+        background-position: bottom left;
+        &__logo {
+            margin: $margin-section-mb;
+        }
+        &__title {
+            height: 48px;
+            width: 100%;
+            font-size: 16px;
+            &--wel {
+                width: 142.04px;
+                margin-bottom: 0px;
+            }
+            &--noacc {
+                width: 92.68px;
+                margin: 4px 0px;
+            }
+        }
+        &__sigin {
+            margin-top: 14px;
+            font-size: 40px;
+        }
+        &__btnlog {
+            padding: 15px 47px;
+        }
+    }
+    .content {
+        padding: 44px 26px;
+    }
+    .section__form {
+        width: 326px;
+        height: 741px;
+        left: 26px;
+    }
+    .extension {
+        margin-top: 37px;
+        &__left {
+            width: 178px;
+            &--btn {
+                padding: 19px 12px 19px 24px;
+                &-img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            &--text {
+                width: 115px;
+                font-size: 12px;
+                padding: 19px 9px 19px 0px;
+            }
+        }
+        &__right {
+            margin-left: 12px;
+            &--fb {
+                padding: 19px 9px;
+                &-img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            &--ap {
+                margin-left: 12px;
+                padding: 19px 9px;
+                &-img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+    .label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .input {
+        font-size: 13px;
+        width: calc(100% - 15px - 75px - 2px);
+        line-height: 20px;
+        margin-top: 16px;
+        padding: 19px 75px 19px 15px;
+    }
+}
